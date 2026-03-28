@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Bedrock Optimizer | AdamJogkins-Eng</title>
+    <style>
+        :root {
+            --accent: #00ff88;
+            --secondary: #6366f1;
+            --bg-dark: #020617;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: radial-gradient(circle at top right, #1e1b4b, var(--bg-dark));
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 120px 20px 60px;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -2px;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-top: 20px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Download Section */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 24px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 450px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #020617;
+            padding: 20px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+        }
+
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+            background: #ffffff;
+        }
+
+        /* Features */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+            margin-bottom: 100px;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .feature h3 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        footer {
+            padding: 40px;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Optimizer</h1>
+        <p class="tagline">The ultimate performance boost for Minecraft Bedrock. Smooth frames, better logic, and optimized resource management.</p>
+    </section>
+
+    <div class="card">
+        <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Minecraft%20Bedrock%20Optimizer.mcaddon" class="download-btn">
+            📥 GET THE ADDON
+        </a>
+        <p style="margin-top: 20px; color: #64748b;">File: Minecraft Bedrock Optimizer.mcaddon</p>
+    </div>
+
+    <div class="grid">
+        <div class="feature">
+            <h3>⚡ Behavior Fixes</h3>
+            <p>Optimized entity logic and ticking to prevent server-side lag spikes[cite: 1, 3].</p>
+        </div>
+        <div class="feature">
+            <h3>📦 Resource Polish</h3>
+            <p>Cleaned textures and UI elements for a faster, more responsive experience[cite: 4].</p>
+        </div>
+        <div class="feature">
+            <h3>🚀 One-Click Install</h3>
+            <p>Packaged as a standard <b>.mcaddon</b> for easy import on mobile and PC[cite: 1, 4].</p>
+        </div>
+    </div>
+
+    <footer>
+        Maintained by <b>adamjogkins-eng</b> on GitHub
+    </footer>
+
+</body>
+</html>
