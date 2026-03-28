@@ -6,109 +6,136 @@
     <title>Universal Bedrock Optimizer | adamjogkins-eng</title>
     <style>
         :root {
-            --primary: #fbbf24; /* Gold/Amber for "Speed" */
-            --bg: #0f172a;
-            --accent: #38bdf8;
+            --cmd-green: #00ff41;
+            --terminal-black: #0d0208;
+            --border-gray: #333;
         }
 
         body {
             margin: 0;
-            background: var(--bg);
-            color: #f1f5f9;
-            font-family: 'Inter', system-ui, sans-serif;
+            background-color: var(--terminal-black);
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-gray);
             text-align: center;
         }
 
-        .hero {
-            padding: 80px 20px;
-            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-        }
-
         h1 {
-            font-size: 3rem;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
+            color: var(--cmd-green);
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+            margin: 0;
+            font-size: 2.5rem;
         }
 
-        .download-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 2px dashed rgba(251, 191, 36, 0.3);
-            padding: 40px;
-            border-radius: 20px;
-            display: inline-block;
-            margin: 40px auto;
-            max-width: 500px;
+        .download-section {
+            margin: 40px 0;
+            text-align: center;
         }
 
         .btn {
-            display: inline-block;
-            background: var(--primary);
-            color: #000;
-            padding: 20px 40px;
-            border-radius: 12px;
+            background: transparent;
+            color: var(--cmd-green);
+            border: 2px solid var(--cmd-green);
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
             text-decoration: none;
-            font-weight: 800;
-            font-size: 1.3rem;
-            transition: all 0.2s;
+            text-transform: uppercase;
+            transition: 0.3s;
+            cursor: pointer;
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(251, 191, 36, 0.4);
+            background: var(--cmd-green);
+            color: black;
+            box-shadow: 0 0 20px var(--cmd-green);
         }
 
-        .function-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+        .console-container {
+            width: 90%;
             max-width: 800px;
-            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-gray);
+            border-radius: 8px;
             padding: 20px;
+            margin-bottom: 50px;
         }
 
-        .chip {
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            padding: 10px;
-            border-radius: 8px;
-            font-family: monospace;
+        .console-header {
+            color: #888;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-gray);
+            padding-bottom: 5px;
+        }
+
+        .function-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 10px;
+            text-align: left;
+        }
+
+        .func-name {
+            color: #00ff41;
             font-size: 0.9rem;
         }
 
-        footer { padding: 50px; opacity: 0.5; }
+        .func-name::before {
+            content: "> ";
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            color: #444;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
 
-    <div class="hero">
-        <h1>Universal Optimizer</h1>
-        <p>Advanced function-based performance controls for Bedrock.</p>
-    </div>
+    <header>
+        <h1>BEDROCK_OPTIMIZER.SYS</h1>
+        <p>Advanced Function Pack by adamjogkins-eng</p>
+    </header>
 
-    <div class="download-box">
+    <section class="download-section">
         <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Universal%20Bedrock%20Optimizer.mcpack" class="btn">
-            ⚡ DOWNLOAD MCPACK
+            Execute Download
         </a>
-        <p style="margin-top: 20px; font-size: 0.9rem; color: #94a3b8;">
-            Filename: Universal Bedrock Optimizer.mcpack
-        </p>
-    </div>
+        <p style="color: #666; font-size: 0.9rem; margin-top: 15px;">Target: Universal Bedrock Optimizer.mcpack</p>
+    </section>
 
-    <h2 style="color: var(--accent);">Included Commands</h2>
-    <div class="function-list">
-        <div class="chip">/function performance_boost</div>
-        <div class="chip">/function ultra_fast</div>
-        <div class="chip">/function fast_forward</div>
-        <div class="chip">/function slow_motion</div>
-        <div class="chip">/function normal_speed</div>
-        <div class="chip">/function help</div>
+    <div class="console-container">
+        <div class="console-header">AVAILABLE_FUNCTIONS.LOG</div>
+        <div class="function-grid">
+            <div class="func-name">performance_boost</div>
+            <div class="func-name">ultra_fast</div>
+            <div class="func-name">turbo_speed</div>
+            <div class="func-name">light_speed</div>
+            <div class="func-name">matrix_mode</div>
+            <div class="func-name">ghost_mode</div>
+            <div class="func-name">god_mode</div>
+            <div class="func-name">chaos_mode</div>
+            <div class="func-name">ant_mode</div>
+            <div class="func-name">zen_mode</div>
+            <div class="func-name">freeze_time</div>
+            <div class="func-name">clear_effects</div>
+        </div>
     </div>
 
     <footer>
-        Maintained by adamjogkins-eng
+        Source: github.com/adamjogkins-eng/mcaddon
     </footer>
 
 </body>
