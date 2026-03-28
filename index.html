@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universal Bedrock Optimizer | adamjogkins-eng</title>
+    <title>Bedrock Suite | adamjogkins-eng</title>
     <style>
         :root {
-            --cmd-green: #00ff41;
-            --terminal-black: #0d0208;
-            --border-gray: #333;
+            --opti-green: #00ff88;
+            --fly-blue: #0ea5e9;
+            --dark: #0f172a;
+            --card: #1e293b;
         }
 
         body {
             margin: 0;
-            background-color: var(--terminal-black);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--dark);
             color: white;
-            font-family: 'Courier New', Courier, monospace;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,119 +24,121 @@
         }
 
         header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #1e1b4b, var(--dark));
             width: 100%;
-            padding: 40px 0;
-            border-bottom: 1px solid var(--border-gray);
-            text-align: center;
         }
 
-        h1 {
-            color: var(--cmd-green);
-            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
-            margin: 0;
-            font-size: 2.5rem;
+        h1 { margin: 0; font-size: 3rem; letter-spacing: -1px; }
+        .author { color: #94a3b8; margin-top: 10px; }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1100px;
+            margin: -40px 0 60px;
         }
 
-        .download-section {
-            margin: 40px 0;
-            text-align: center;
+        .mod-card {
+            background: var(--card);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s;
+        }
+
+        .mod-card:hover { transform: translateY(-10px); }
+
+        .opti-theme { border-top: 5px solid var(--opti-green); }
+        .fly-theme { border-top: 5px solid var(--fly-blue); }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
         .btn {
-            background: transparent;
-            color: var(--cmd-green);
-            border: 2px solid var(--cmd-green);
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
+            margin-top: auto;
+            padding: 18px;
+            border-radius: 12px;
             text-decoration: none;
-            text-transform: uppercase;
-            transition: 0.3s;
-            cursor: pointer;
+            font-weight: 800;
+            text-align: center;
+            transition: opacity 0.2s;
         }
 
-        .btn:hover {
-            background: var(--cmd-green);
-            color: black;
-            box-shadow: 0 0 20px var(--cmd-green);
-        }
-
-        .console-container {
-            width: 90%;
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-gray);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 50px;
-        }
-
-        .console-header {
-            color: #888;
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--border-gray);
-            padding-bottom: 5px;
-        }
-
-        .function-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 10px;
+        .cmd-list {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 12px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            margin: 20px 0;
             text-align: left;
         }
 
-        .func-name {
-            color: #00ff41;
-            font-size: 0.9rem;
-        }
+        .cmd { color: #f0abfc; }
 
-        .func-name::before {
-            content: "> ";
-        }
-
-        footer {
-            margin-top: auto;
-            padding: 20px;
-            color: #444;
-            font-size: 0.8rem;
-        }
+        footer { margin-top: auto; padding: 40px; color: #64748b; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>BEDROCK_OPTIMIZER.SYS</h1>
-        <p>Advanced Function Pack by adamjogkins-eng</p>
+        <h1>BEDROCK ENHANCED</h1>
+        <p class="author">Developed by adamjogkins-eng</p>
     </header>
 
-    <section class="download-section">
-        <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Universal%20Bedrock%20Optimizer.mcpack" class="btn">
-            Execute Download
-        </a>
-        <p style="color: #666; font-size: 0.9rem; margin-top: 15px;">Target: Universal Bedrock Optimizer.mcpack</p>
-    </section>
+    <div class="container">
+        <div class="mod-card opti-theme">
+            <span class="badge" style="background: rgba(0,255,136,0.1); color: var(--opti-green);">System Performance</span>
+            <h2>Universal Optimizer</h2>
+            <p>Boost your frame rates and stabilize your tick-rate with advanced system functions.</p>
+            
+            <div class="cmd-list">
+                <div><span class="cmd">/function</span> performance_boost</div>
+                <div><span class="cmd">/function</span> ultra_fast</div>
+                <div><span class="cmd">/function</span> matrix_mode</div>
+                <div><span class="cmd">/function</span> help</div>
+            </div>
 
-    <div class="console-container">
-        <div class="console-header">AVAILABLE_FUNCTIONS.LOG</div>
-        <div class="function-grid">
-            <div class="func-name">performance_boost</div>
-            <div class="func-name">ultra_fast</div>
-            <div class="func-name">turbo_speed</div>
-            <div class="func-name">light_speed</div>
-            <div class="func-name">matrix_mode</div>
-            <div class="func-name">ghost_mode</div>
-            <div class="func-name">god_mode</div>
-            <div class="func-name">chaos_mode</div>
-            <div class="func-name">ant_mode</div>
-            <div class="func-name">zen_mode</div>
-            <div class="func-name">freeze_time</div>
-            <div class="func-name">clear_effects</div>
+            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Universal%20Bedrock%20Optimizer.mcpack" 
+               class="btn" style="background: var(--opti-green); color: #000;">
+               GET OPTIMIZER
+            </a>
+        </div>
+
+        <div class="mod-card fly-theme">
+            <span class="badge" style="background: rgba(14,165,233,0.1); color: var(--fly-blue);">Movement Utility</span>
+            <h2>Survival Flight</h2>
+            <p>Unlock the ability to fly in survival mode with safety protocols and speed tiers.</p>
+            
+            <div class="cmd-list">
+                <div><span class="cmd">/function</span> fly </div>
+                <div><span class="cmd">/function</span> fly_fast </div>
+                <div><span class="cmd">/function</span> fly_super </div>
+                <div><span class="cmd">/function</span> land </div>
+            </div>
+
+            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Survival%20Flight.mcpack" 
+               class="btn" style="background: var(--fly-blue); color: #fff;">
+               GET FLIGHT MOD
+            </a>
         </div>
     </div>
 
     <footer>
-        Source: github.com/adamjogkins-eng/mcaddon
+        &copy; 2026 adamjogkins-eng | Hosted via GitHub Pages
     </footer>
 
 </body>
