@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedrock Suite | adamjogkins-eng</title>
+    <title>Bedrock Utility Suite | adamjogkins-eng</title>
     <style>
         :root {
             --opti-green: #00ff88;
             --fly-blue: #0ea5e9;
-            --dark: #0f172a;
-            --card: #1e293b;
+            --tick-purple: #a855f7;
+            --dark: #020617;
+            --card: #111827;
         }
 
         body {
             margin: 0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             background: var(--dark);
             color: white;
             display: flex;
@@ -25,120 +26,115 @@
 
         header {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(to bottom, #1e1b4b, var(--dark));
+            padding: 80px 20px;
+            background: radial-gradient(circle at top, #1e1b4b, var(--dark));
             width: 100%;
         }
 
-        h1 { margin: 0; font-size: 3rem; letter-spacing: -1px; }
-        .author { color: #94a3b8; margin-top: 10px; }
+        h1 { margin: 0; font-size: 3.5rem; letter-spacing: -2px; text-transform: uppercase; }
+        .author { color: #64748b; margin-top: 10px; font-weight: 500; }
 
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            width: 90%;
-            max-width: 1100px;
-            margin: -40px 0 60px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            width: 95%;
+            max-width: 1200px;
+            margin: -50px 0 60px;
         }
 
         .mod-card {
             background: var(--card);
-            border-radius: 24px;
-            padding: 40px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 28px;
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,0.05);
             display: flex;
             flex-direction: column;
-            transition: transform 0.3s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .mod-card:hover { transform: translateY(-10px); }
+        .mod-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); }
 
-        .opti-theme { border-top: 5px solid var(--opti-green); }
-        .fly-theme { border-top: 5px solid var(--fly-blue); }
-
-        .badge {
-            display: inline-block;
-            padding: 5px 12px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
+        .opti-theme { border-bottom: 6px solid var(--opti-green); }
+        .fly-theme { border-bottom: 6px solid var(--fly-blue); }
+        .tick-theme { border-bottom: 6px solid var(--tick-purple); }
 
         .btn {
             margin-top: auto;
-            padding: 18px;
-            border-radius: 12px;
+            padding: 16px;
+            border-radius: 14px;
             text-decoration: none;
             font-weight: 800;
             text-align: center;
-            transition: opacity 0.2s;
+            transition: transform 0.2s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
+        .btn:active { transform: scale(0.98); }
+
         .cmd-list {
-            background: rgba(0,0,0,0.2);
+            background: rgba(0,0,0,0.3);
             padding: 15px;
             border-radius: 12px;
-            font-family: monospace;
-            font-size: 0.85rem;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
             margin: 20px 0;
-            text-align: left;
+            line-height: 1.6;
         }
 
         .cmd { color: #f0abfc; }
 
-        footer { margin-top: auto; padding: 40px; color: #64748b; font-size: 0.8rem; }
+        footer { padding: 40px; color: #475569; font-size: 0.85rem; text-align: center; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>BEDROCK ENHANCED</h1>
+        <h1>Bedrock Enhanced</h1>
         <p class="author">Developed by adamjogkins-eng</p>
     </header>
 
     <div class="container">
         <div class="mod-card opti-theme">
-            <span class="badge" style="background: rgba(0,255,136,0.1); color: var(--opti-green);">System Performance</span>
-            <h2>Universal Optimizer</h2>
-            <p>Boost your frame rates and stabilize your tick-rate with advanced system functions.</p>
-            
+            <h2 style="color: var(--opti-green);">Optimizer</h2>
+            <p>Ultimate performance boost and system cleanup functions.</p>
             <div class="cmd-list">
                 <div><span class="cmd">/function</span> performance_boost</div>
                 <div><span class="cmd">/function</span> ultra_fast</div>
-                <div><span class="cmd">/function</span> matrix_mode</div>
                 <div><span class="cmd">/function</span> help</div>
             </div>
-
             <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Universal%20Bedrock%20Optimizer.mcpack" 
-               class="btn" style="background: var(--opti-green); color: #000;">
-               GET OPTIMIZER
-            </a>
+               class="btn" style="background: var(--opti-green); color: #000;">Download Pack</a>
         </div>
 
         <div class="mod-card fly-theme">
-            <span class="badge" style="background: rgba(14,165,233,0.1); color: var(--fly-blue);">Movement Utility</span>
-            <h2>Survival Flight</h2>
-            <p>Unlock the ability to fly in survival mode with safety protocols and speed tiers.</p>
-            
+            <h2 style="color: var(--fly-blue);">Survival Flight</h2>
+            <p>Take to the skies with three tiers of flight speed and safe landing[cite: 9].</p>
             <div class="cmd-list">
-                <div><span class="cmd">/function</span> fly </div>
-                <div><span class="cmd">/function</span> fly_fast </div>
-                <div><span class="cmd">/function</span> fly_super </div>
-                <div><span class="cmd">/function</span> land </div>
+                <div><span class="cmd">/function</span> fly</div>
+                <div><span class="cmd">/function</span> fly_super</div>
+                <div><span class="cmd">/function</span> land [cite: 9]</div>
             </div>
-
             <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Survival%20Flight.mcpack" 
-               class="btn" style="background: var(--fly-blue); color: #fff;">
-               GET FLIGHT MOD
-            </a>
+               class="btn" style="background: var(--fly-blue); color: #fff;">Download Pack</a>
+        </div>
+
+        <div class="mod-card tick-theme">
+            <h2 style="color: var(--tick-purple);">Tick Rate</h2>
+            <p>Manipulate world time and simulation speed using custom tick functions.</p>
+            <div class="cmd-list">
+                <div><span class="cmd">/function</span> tick_rate_function </div>
+                <div><span class="cmd">Edit:</span> tick_rate.json </div>
+            </div>
+            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/TickRateChanger.mcpack" 
+               class="btn" style="background: var(--tick-purple); color: #fff;">Download Pack</a>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 adamjogkins-eng | Hosted via GitHub Pages
+        &copy; 2026 adamjogkins-eng • All rights reserved.<br>
+        Ensure "Allow Cheats" is enabled for functions to execute.
     </footer>
 
 </body>
