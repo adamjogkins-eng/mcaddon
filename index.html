@@ -3,62 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedrock Master Suite | adamjogkins-eng</title>
+    <title>Bedrock Pro Suite | adamjogkins-eng</title>
     <style>
         :root {
-            --opti: #00ff88; --fly: #0ea5e9; --tick: #a855f7; --xray: #f97316; --main: #6366f1;
-            --dark: #020617; --card: #0f172a;
+            --opti: #00ff88; --fly: #0ea5e9; --tick: #a855f7; --xray: #f97316;
+            --diamond: #06b6d4; --netherite: #94a3b8; --dark: #020617; --card: #0f172a;
         }
         body { margin: 0; font-family: 'Inter', sans-serif; background: var(--dark); color: white; display: flex; flex-direction: column; align-items: center; }
         header { text-align: center; padding: 60px 20px; background: linear-gradient(to bottom, #1e1b4b, var(--dark)); width: 100%; }
-        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 95%; max-width: 1300px; margin: -40px 0 60px; }
+        .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 95%; max-width: 1400px; margin: -40px 0 60px; }
         .mod-card { background: var(--card); border-radius: 20px; padding: 25px; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; transition: 0.3s; }
         .mod-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); }
         .btn { margin-top: auto; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 800; text-align: center; color: white; text-transform: uppercase; font-size: 0.8rem; }
         .cmd-list { background: rgba(0,0,0,0.4); padding: 10px; border-radius: 8px; font-family: monospace; font-size: 0.7rem; margin: 15px 0; color: #cbd5e1; }
-        .highlight { font-weight: bold; color: var(--main); }
     </style>
 </head>
 <body>
     <header>
-        <h1>BEDROCK MASTER SUITE</h1>
+        <h1>BEDROCK PRO SUITE</h1>
         <p style="color: #64748b;">The complete modding collection by adamjogkins-eng</p>
     </header>
 
     <div class="container">
-        <div class="mod-card" style="border-top: 4px solid var(--main);">
-            <h3 style="color: var(--main);">Full Optimizer</h3>
-            <p style="font-size: 0.85rem;">Combined Behavior & Resource pack for a total performance overhaul.</p>
-            <div class="cmd-list">Includes: Optimizer-Behaviors & Optimizer-Resources</div>
-            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Minecraft%20Bedrock%20Optimizer.mcaddon" class="btn" style="background: var(--main);">Download .mcaddon</a>
-        </div>
-
         <div class="mod-card" style="border-top: 4px solid var(--opti);">
-            <h3 style="color: var(--opti);">Function Boost</h3>
-            <p style="font-size: 0.85rem;">Massive library of utility functions from Performance to Chaos mode.</p>
-            <div class="cmd-list">/function performance_boost<br>/function ultra_fast<br>/function chaos_mode</div>
+            <h3 style="color: var(--opti);">System Optimizer</h3>
+            <p style="font-size: 0.85rem;">Performance functions including chaos mode and performance boosts.</p>
+            <div class="cmd-list">/function performance_boost<br>/function ultra_fast<br>/function help</div>
             <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Universal%20Bedrock%20Optimizer.mcpack" class="btn" style="background: var(--opti); color: #000;">Download .mcpack</a>
         </div>
 
         <div class="mod-card" style="border-top: 4px solid var(--fly);">
             <h3 style="color: var(--fly);">Survival Flight</h3>
-            <p style="font-size: 0.85rem;">Fly in survival mode with safety landing protocols.</p>
+            <p style="font-size: 0.85rem;">Tiered flight speeds with safe landing protocols for survival mode.</p>
             <div class="cmd-list">/function fly<br>/function fly_super<br>/function land</div>
             <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Survival%20Flight.mcpack" class="btn" style="background: var(--fly);">Download .mcpack</a>
         </div>
 
-        <div class="mod-card" style="border-top: 4px solid var(--tick);">
-            <h3 style="color: var(--tick);">Tick Master</h3>
-            <p style="font-size: 0.85rem;">Control game simulation speed and world timing.</p>
-            <div class="cmd-list">/function tick_rate_function<br>Config: tick_rate.json</div>
-            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/TickRateChanger.mcpack" class="btn" style="background: var(--tick);">Download .mcpack</a>
+        <div class="mod-card" style="border-top: 4px solid var(--xray);">
+            <h3 style="color: var(--xray);">X-Ray (All Ores)</h3>
+            <p style="font-size: 0.85rem;">Comprehensive vision for all Overworld and Nether ores.</p>
+            <div class="cmd-list">Diamond, Ancient Debris, Emerald, Gold, Iron, and more.</div>
+            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Xray_AllOres.mcpack" class="btn" style="background: var(--xray);">Download .mcpack</a>
         </div>
 
-        <div class="mod-card" style="border-top: 4px solid var(--xray);">
-            <h3 style="color: var(--xray);">X-Ray Vision</h3>
-            <p style="font-size: 0.85rem;">Transparent textures for stone/dirt to reveal all ores.</p>
-            <div class="cmd-list">Supports: Diamond, Emerald, Ancient Debris, etc.</div>
-            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/BedrockXrayPack.mcpack" class="btn" style="background: var(--xray);">Download .mcpack</a>
+        <div class="mod-card" style="border-top: 4px solid var(--diamond);">
+            <h3 style="color: var(--diamond);">Diamond X-Ray</h3>
+            <p style="font-size: 0.85rem;">Specialized vision for Diamond and Deepslate Diamond Ores.</p>
+            <div class="cmd-list">Optimized for rapid Diamond mining at low depths.</div>
+            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Xray_Diamond.mcpack" class="btn" style="background: var(--diamond);">Download .mcpack</a>
+        </div>
+
+        <div class="mod-card" style="border-top: 4px solid var(--netherite);">
+            <h3 style="color: var(--netherite);">Netherite X-Ray</h3>
+            <p style="font-size: 0.85rem;">Specialized vision for Ancient Debris in the Nether.</p>
+            <div class="cmd-list">Targets Ancient Debris through Netherrack and Basalt.</div>
+            <a href="https://github.com/adamjogkins-eng/mcaddon/raw/main/Xray_Netherite.mcpack" class="btn" style="background: var(--netherite);">Download .mcpack</a>
         </div>
     </div>
 </body>
